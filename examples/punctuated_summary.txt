@@ -1,0 +1,1 @@
+Commit message style guide for Git.

@@ -1,0 +1,56 @@
+- id: check-description-max-length
+  name: Check Description Max Length
+  description: Check lines in the description are not more than 72 characters.
+  entry: check-description-max-length
+  language: python
+  stages:
+    - commit-msg
+- id: check-second-line-empty
+  name: Check Second Line is Empty
+  description: Check the second line of the commit message is blank.
+  entry: check-second-line-empty
+  language: python
+  stages:
+    - commit-msg
+- id: check-summary-conjunction
+  name: Check Summary Conjugated Sentence
+  description: Check the summary does not contain conjugated sentences.
+  entry: check-summary-conjunction
+  language: python
+  stages:
+    - commit-msg
+- id: check-summary-imperative
+  name: Check Summary is Imperative Tense
+  description: Check the summary starts with a verb.
+  entry: check-summary-imperative
+  language: python
+  stages:
+    - commit-msg
+- id: check-summary-capitalized
+  name: Check Summary is Capitalized
+  description: Check the summary starts with a capital letter.
+  entry: check-summary-capitalized
+  language: python
+  stages:
+    - commit-msg
+- id: check-summary-max-length
+  name: Check Summary Max Length
+  description: Check the summary is not more than 54 characters.
+  entry: check-summary-max-length
+  language: python
+  stages:
+    - commit-msg
+- id: check-summary-min-length
+  name: Check Description Min Length
+  description: Check the summary is at least 6 characters.
+  entry: check-summary-min-length
+  language: python
+  stages:
+    - commit-msg
+- id: check-summary-punctuation
+  name: Check Summary is not Punctuated
+  description: Check the summary does not end with punctuation.
+  entry: check-summary-punctuation
+  language: python
+  stages:
+    - commit-msg
