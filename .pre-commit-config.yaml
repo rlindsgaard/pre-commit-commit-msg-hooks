@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/rlindsgaard/pre-commit-commit-msg-hooks
+    rev: 0.1.0
+    hooks:
+      - id: check-description-max-length
+      - id: check-second-line-empty
+      - id: check-summary-capitalized
+      - id: check-summary-conjunction
+      - id: check-summary-imperative
+      - id: check-summary-max-length
+      - id: check-summary-min-length
+      - id: check-summary-punctuation
