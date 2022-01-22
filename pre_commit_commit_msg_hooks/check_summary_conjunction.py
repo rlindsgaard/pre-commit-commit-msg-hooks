@@ -1,4 +1,8 @@
-"""Check the summary does not contain conjugated sentences."""
+"""
+Check the summary does not contain conjugated sentences.
+
+Searches for occurrences of 'and', 'nor', and 'or' and fails if found.
+"""
 from pre_commit_commit_msg_hooks.common import get_commit_msg_lines
 
 

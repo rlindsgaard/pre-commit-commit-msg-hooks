@@ -1,4 +1,9 @@
-"""Check the summary does not end with punctuation."""
+"""
+Check the summary does not end with punctuation.
+
+Checks the last character against ``string.punctuation`` and fails
+on match.
+"""
 from pre_commit_commit_msg_hooks.common import get_commit_msg_lines
 
 

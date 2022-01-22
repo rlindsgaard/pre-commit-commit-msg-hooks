@@ -1,4 +1,9 @@
-"""Check the summary starts with a verb."""
+"""
+Check the summary starts with a verb.
+
+Searches a wordlist comprised of > 6000 verbs. The check fails
+if not found.
+"""
 from pre_commit_commit_msg_hooks.common import get_commit_msg_lines
 import os
 
