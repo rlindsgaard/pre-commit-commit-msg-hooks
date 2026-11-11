@@ -15,6 +15,9 @@ with open(os.path.join(here, 'verbs-wordlist.txt'), mode='r') as f:
 
 def main():
     summary, _ = get_commit_msg_lines()
+    if summary is None:
+        # This means there's nothing to check
+        return 0
 
     first_word = summary.split()[0]
 

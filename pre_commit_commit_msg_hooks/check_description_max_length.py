@@ -6,7 +6,7 @@ def main():
     _, description = get_commit_msg_lines()
 
     if not description:
-        return
+        return 0
 
     limit = 72
     retval = 0

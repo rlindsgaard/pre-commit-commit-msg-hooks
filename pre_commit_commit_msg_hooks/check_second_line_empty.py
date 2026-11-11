@@ -6,7 +6,7 @@ def main():
     _, description = get_commit_msg_lines()
 
     if not description:
-        return
+        return 0
 
     if description[0] != '':
         print(description[0])

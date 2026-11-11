@@ -31,6 +31,21 @@ def test_good_commit_msg(check, mocker):
     assert check.main() == 0
 
 
+@pytest.mark.parametrize('check', [
+    check_description_max_length,
+    check_second_line_empty,
+    check_summary_conjunction,
+    check_summary_imperative,
+    check_summary_capitalized,
+    check_summary_max_length,
+    check_summary_min_length,
+    check_summary_punctuation,
+])
+def test_fixup_commit(check, mocker):
+    patch_args(check.__name__, mocker, 'fixup_summary')
+    assert check.main() == 0
+
+
 @pytest.mark.parametrize('check,commit_msg,expect_err', [
     (
         check_description_max_length,
