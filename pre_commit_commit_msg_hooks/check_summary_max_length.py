@@ -4,6 +4,10 @@ from pre_commit_commit_msg_hooks.common import get_commit_msg_lines
 
 def main():
     summary, _ = get_commit_msg_lines()
+    if summary is None:
+        # This means there's nothing to check
+        return 0
+
     limit = 54
     summary_len = len(summary)
     if summary_len > limit:
